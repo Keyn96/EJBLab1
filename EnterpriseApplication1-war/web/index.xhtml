@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:dataTable var="mat" value="#{materialBean.selectMaterial()}"
+                         border="1" cellpadding="2" cellspacing="2">
+                <h:column>
+                    <f:facet name="header"> id_material </f:facet>
+                    <h:outputText value="#{matmat.id_material}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Name </f:facet>
+                    <h:outputText value="#{mat.name}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> weight </f:facet>
+                    <h:outputText value="#{mat.weight}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> manufacturer</f:facet>
+                    <h:outputText value="#{mat.manufacturer}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">cost</f:facet>
+                    <h:outputText value="#{mat.cost}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">quantity</f:facet>
+                    <h:outputText value="#{mat.quantity}"></h:outputText>
+                </h:column>
+            </h:dataTable>
+            <h:commandLink value="add" action="/add.xhtml" />
+        </h:form>
+        
+    </h:body>
+</html>
+
